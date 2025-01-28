@@ -1,0 +1,36 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  z-index: 1;
+  border-bottom: 1px solid #000;
+}
+
+body {
+  margin-top: 15vh;
+  padding: 5vh 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.cat_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: none;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 90vw;
+  justify-content: center;
+}
+
+.box {
+  height: 100px;
+  width: 250px;
+  border: 2px solid #000;
+  text-align: center;
+}
