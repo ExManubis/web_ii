@@ -27,17 +27,17 @@ header {
   height: 10vh;
   width: 100vw;
   z-index: 1;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--black);
 }
 
 body {
   margin-top: 15vh;
-  background: #ebebf2;
+  background: var(--white);
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--black);
 }
 
 .categories {
@@ -55,7 +55,7 @@ a {
 
 .box {
   height: 150px;
-  border: 10px solid #000;
-  background: #8c030e;
+  border: 10px solid var(--black);
+  background: var(--red50);
   text-align: center;
 }
