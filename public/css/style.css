@@ -20,6 +20,16 @@ img {
   --red100: #8c030e;
 }
 
+/* FONTS */
+@font-face {
+  font-family: hero;
+  src: url("../fonts/KickerTrial-BlackSlanted.ttf");
+}
+
+@font-face {
+  font-family: xl;
+  src: url("../fonts/KickerTrial-BlackItalic.ttf");
+}
 header {
   position: fixed;
   top: 0;
@@ -35,6 +45,16 @@ body {
   background: var(--white);
 }
 
+h1 {
+  font-family: hero;
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-family: xl;
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
   color: var(--black);
@@ -45,17 +65,23 @@ a {
   flex-direction: column;
   width: 90vw;
   margin: 0 auto;
+  text-align: center;
 }
 
 .cat_container {
+  margin: 5vh 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 150px;
-  border: 10px solid var(--black);
+  border: 3px solid var(--black);
   background: var(--red50);
   text-align: center;
+  color: var(--white);
 }
