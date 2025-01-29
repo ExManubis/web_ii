@@ -1,0 +1,51 @@
+.menu {
+  top: 7.5vh;
+  width: 100vw;
+  left: 0;
+  position: fixed;
+  height: 0vh;
+  transition: ease-in 1s;
+  z-index: 10;
+  background: var(--red100);
+  color: var(--white);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu.active {
+  opacity: 1;
+  height: 92.5vh;
+  transition: ease-out 1s;
+  pointer-events: all;
+  font-family: xl;
+}
+
+.menu li {
+  list-style-type: none;
+  font-family: xl;
+  color: var(--white);
+  font-size: 3rem;
+  margin: 40px;
+}
+
+.menu a {
+  color: var(--white);
+}
+
+.menu a:visited {
+  color: var(--white);
+}
+
+.menu a:hover {
+  color: var(--red00);
+  transition: 0.5s color;
+}
+
+.no_scroll {
+  overflow: hidden;
+}
