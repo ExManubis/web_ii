@@ -7,7 +7,6 @@ let pastScrollPosition = 0;
 // EVENTLISTENERS
 window.addEventListener("scroll", () => {
   let currentScrollPosition = scrollY;
-  console.log(currentScrollPosition);
   if (
     currentScrollPosition > pastScrollPosition &&
     currentScrollPosition > 130
