@@ -30,6 +30,7 @@ img {
   font-family: xl;
   src: url("../fonts/KickerTrial-BlackItalic.ttf");
 }
+
 header {
   position: fixed;
   top: 0;
@@ -40,8 +41,38 @@ header {
   border-bottom: 1px solid var(--black);
 }
 
+.header_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 2.5vw 0 5vw;
+}
+
+.logo {
+  text-align: center;
+  font-family: hero;
+  font-size: 2rem;
+}
+
+.menu_icon {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  z-index: 2;
+}
+
+.line {
+  width: 50px;
+  height: 5px;
+  background: var(--black);
+  box-shadow: 2px 2.5px var(--red50);
+}
+
 body {
   margin-top: 15vh;
+  padding: 5vh 0;
   background: var(--white);
 }
 
@@ -77,6 +108,7 @@ a {
 
 .box {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   height: 150px;
@@ -84,4 +116,22 @@ a {
   background: var(--red50);
   text-align: center;
   color: var(--white);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 102%;
+  height: 105%;
+  top: 2%;
+  left: 1%;
+  border: 1px solid var(--black);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--red50),
+    var(--red50) 2px,
+    transparent 2px,
+    var(--black) 6px
+  );
 }
