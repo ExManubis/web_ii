@@ -74,6 +74,7 @@ img {
   flex-direction: column;
   gap: 7.5px;
   z-index: 2;
+  cursor: pointer;
 }
 
 .line {
@@ -245,6 +246,35 @@ a {
 
 .price {
   align-self: center end;
+}
+
+.sold_out_marker {
+  display: none;
+}
+
+.sold_out img {
+  filter: grayscale(100%) brightness(0.7);
+}
+
+.sold_out .sold_out_marker {
+  display: unset;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+  padding-top: 15px;
+  z-index: 1;
+}
+
+.sale_amount {
+  display: none;
+}
+
+.sale .sale_amount {
+  display: unset;
+  position: absolute;
+  font-family: l;
+  background: var(--red50);
+  width: 50%;
 }
 
 .footer {
