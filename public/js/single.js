@@ -4,15 +4,11 @@ const productUrl = `https://kea-alt-del.dk/t7/api/products/${productId}`;
 const productContainer = document.querySelector(".product_container");
 
 // FUNCTIONS
-function getData() {
-  fetch(productUrl).then((response) =>
-    response.json().then((data) => show(data)),
-  );
-}
-
-function show(data) {
-  console.log(data);
-  productContainer.innerHTML = `
+window.addEventListener("load", () => {
+  fetch(productUrl).then((data) =>
+    data.json().then(
+      (data) =>
+        (productContainer.innerHTML = `
    <img
         src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp"
         alt="product image"
@@ -27,6 +23,10 @@ function show(data) {
           <h2>Category</h2>
           <p>${data.category}</p>
         </div>
+     <div>
+       <h2>Type</h2>
+       <p>${data.articletype}</p>
+     </div>
         <div>
           <h2>Brand</h2>
           <p>${data.brandname}</p>
@@ -50,7 +50,7 @@ function show(data) {
         </form>
       </div>
 
-`;
-}
-
-getData();
+`),
+    ),
+  );
+});
