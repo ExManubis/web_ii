@@ -1,5 +1,6 @@
 // CONSTANTS
 const pList = document.querySelector(".productlist_container");
+const pItem = document.querySelector(".productlist_item");
 const listURL = "https://kea-alt-del.dk/t7/api/products";
 
 // FUNCTIONS
