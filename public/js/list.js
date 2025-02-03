@@ -1,7 +1,10 @@
 // CONSTANTS
+const header = document.querySelector(".header");
 const pList = document.querySelector(".productlist_container");
 const pItem = document.querySelector(".productlist_item");
-const listURL = "https://kea-alt-del.dk/t7/api/products";
+const getUrl = window.location.search;
+const getSearch = new URLSearchParams(getUrl);
+const category = getSearch.get("category");
 
 // FUNCTIONS
 function showproducts(data) {
@@ -32,10 +35,11 @@ ${product.productdisplayname}
     )
     .join("");
   pList.innerHTML = markup;
+  header.textContent = `${category}`;
 }
 
 function getData() {
-  fetch(listURL)
+  fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`)
     .then((response) => response.json())
     .then((data) => showproducts(data));
 }
