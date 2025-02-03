@@ -1,5 +1,5 @@
 // CONSTANTS
-const productId = 1532;
+const productId = new URLSearchParams(window.location.search).get("id");
 const productUrl = `https://kea-alt-del.dk/t7/api/products/${productId}`;
 const productContainer = document.querySelector(".product_container");
 
