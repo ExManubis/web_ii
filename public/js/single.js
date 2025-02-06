@@ -11,8 +11,7 @@ window.addEventListener("load", () => {
         (productContainer.innerHTML = `
    <img
         src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp"
-        alt="product image"
-      />
+        alt="product image" class="${data.soldout && "soldout"}"/>
       <div class="product_info">
         <h1>Product Information</h1>
         <div>
@@ -32,8 +31,9 @@ window.addEventListener("load", () => {
           <p>${data.brandname}</p>
         </div>
       </div>
-      <div class="order_form">
+      <div class="order_form ${data.discount && "sale"} ${data.soldout && "soldout"}">
         <h1>${data.productdisplayname}</h1>
+        <h2 class="sale_amount">${data.discount}%</h2>
         <h2>DKK ${data.price},-</h2>
         <form action="#">
           <label for="size">Size: </label>
@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
           </select>
           <br />
           <br />
-          <input type="submit" name="submit" value="Add to basket" />
+          <input type="submit" name="submit" value="${data.soldout ? "Sold out" : "Add to basket"}"/>
         </form>
       </div>
 
