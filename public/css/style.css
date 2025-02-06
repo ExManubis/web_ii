@@ -291,6 +291,12 @@ a {
 .product_container img {
   object-fit: cover;
   align-self: stretch;
+  grid-column: 1;
+}
+
+.product_container .sale_amount {
+  position: unset;
+  background-color: var(--red00);
 }
 
 .product_container h1 {
@@ -321,6 +327,10 @@ a {
     transparent 2px,
     var(--black) 6px
   );
+}
+
+.soldout {
+  filter: grayscale(100%) brightness(0.7);
 }
 
 @media screen and (min-width: 800px) {
