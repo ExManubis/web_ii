@@ -288,6 +288,11 @@ a {
   background: var(--red50);
 }
 
+.product_container img {
+  object-fit: cover;
+  align-self: stretch;
+}
+
 .product_container h1 {
   font-size: 2rem;
 }
