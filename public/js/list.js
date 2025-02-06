@@ -11,8 +11,9 @@ function showproducts(data) {
   const markup = data
     .map(
       (product) => `
-<div class="productlist_item">
+<div class="productlist_item ${product.discount && "sale"}">
           <a href="product.html?id=${product.id}">
+            <h1 class="sale_amount">-${product.discount}%</h1>
             <img
               src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
               alt="product image"
